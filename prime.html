@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+
+function myFunction(){
+var a=document.fox.vixen.value;
+document.getElementById("demo").innerHTML=a+" is a prime number";
+
+if((a==2)||(a==3)||(a==5)||(a==7)||(a==11)){
+document.getElementById("demo").innerHTML=a+ " is a prime number";
+return true;
+}
+if(a==0){
+document.getElementById("demo").innerHTML= a+" Not a prime number";
+}
+if(a==1){
+document.getElementById("demo").innerHTML=a+" Not a prime number";
+}
+if((a%2==0 )||(a%3==0)||(a%4==0)||(a%5==0)||(a%6==0)||(a%7==0)||(a%8==0)||(a%9==0)||(a%10==0)||(a%11==0)){
+document.getElementById("demo").innerHTML=a+" is not a prime number";
+}
+
+}
+</script>
+</head>
+<body>
+<form name="fox">
+<input type="number" name="vixen">
+<input type="button" value="click here" onclick="myFunction()">
+
+</form>
+<h1 id="demo"> </h1>
+
+</body>
+
+
+
+
+</html>

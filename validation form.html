@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="./BootstrapFiles/bootstrap-4.2.1-dist/css/bootstrap.min.css" />
+<script src="./BootstrapFiles/jquery-3.3.1.min.js" ></script>
+<script src="./BootstrapFiles/Popper/popper.min.js" ></script>
+<script src="./BootstrapFiles/bootstrap-4.2.1-dist/bootstrap-4.2.1-dist/js/bootstrap.min.js" ></script>
+</head>
+<body class="container">
+<h1>VALEDITION FORM</h1>
+
+<form class="form-group" name="myform" id="eva">
+<input class="form-control" name="fname" placeholder="input number" id="fnameid" type="number"/><br>
+
+
+<button class="btn btn-info" type="button" onClick="myformclick()">clickme</button>
+</form>
+
+<h2 id="afroza"></h2>
+
+
+<script>
+
+function myformclick(){
+var primeNumber = document.myform.fname.value;
+ var toNumber = parseInt(primeNumber);
+ 
+ 
+ 
+ 
+ function isPrime(number){
+ for (var i = 2; i< number; i++){
+ if (number % i === 0){
+ return false
+     }
+ }
+ return number!==1|| number !== 0;
+ }
+
+ var result = isPrime(toNumber);
+  if(result == true){
+  document.getElementById("afroza").innerHTML = toNumber +" "+ "is a prime number";
+  } else {
+  document.getElementById("afroza").innerHTML = toNumber +" "+ "is not a prime number";
+}
+
+}
+</script>
+
+</body>
+</html>
